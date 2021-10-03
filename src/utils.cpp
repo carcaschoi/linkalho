@@ -14,8 +14,8 @@ void attemptForceReboot()
         printf("bpcInit: %08X\n", rc);
     else
     {
-        bpcRebootSystem();
-        bpcExit();
+        spsmInitialize();
+        spsmShutdown(true);
     }
 #else
     std::cout << "Reboot would happen here" << std::endl;
